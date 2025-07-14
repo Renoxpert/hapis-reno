@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAPIS RENO XPERT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --text-color: white;
+      --card-bg: #1e293b;
+      --accent: #10b981;
+    }
+    .light-mode {
+      --bg-color: #ffffff;
+      --text-color: #1e293b;
+      --card-bg: #f1f5f9;
+      --accent: #0ea5e9;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.4s ease;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8a8fdd4c43?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    header h1, header p, .whatsapp-btn {
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent);
+    }
+    header p {
+      font-size: 1.3rem;
+      margin: 20px 0;
+    }
+    .whatsapp-btn {
+      background: var(--accent);
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background: #059669;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: var(--accent);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      background: var(--bg-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-mode" onclick="toggleTheme()">Tukar Tema</button>
+
+  <header>
+    <h1>HAPIS RENO XPERT</h1>
+    <p>Rekaan Renovasi Yang Mengubah Hidup Anda</p>
+    <a href="https://wa.me/60123456789" class="whatsapp-btn" target="_blank">WhatsApp Sekarang</a>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Servis Kami</h2>
+    <div class="cards">
+      <div class="card"><h3>Renovasi Dapur</h3><p>Konsep moden, material berkualiti, hasil kerja premium.</p></div>
+      <div class="card"><h3>Ubah Suai Bilik Air</h3><p>Transformasi jadi gaya hotel mewah & tahan lama.</p></div>
+      <div class="card"><h3>Binaan Tambahan</h3><p>Tambah ruang seperti dapur, bilik, atau anjung.</p></div>
+      <div class="card"><h3>Makeover Ruang Tamu</h3><p>Lighting dan ceiling eksklusif, nampak mahal.</p></div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Galeri Projek</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/featured/?kitchen" alt="Dapur">
+      <img src="https://source.unsplash.com/featured/?bathroom" alt="Bilik Air">
+      <img src="https://source.unsplash.com/featured/?livingroom" alt="Ruang Tamu">
+      <img src="https://source.unsplash.com/featured/?renovation" alt="Renovation">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 HAPIS RENO XPERT. Rekabentuk | Renovasi | Kualiti Dijamin.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
